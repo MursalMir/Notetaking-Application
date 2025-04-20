@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ContactManagerTest" time="0.2" tests="18" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ContactManagerTest" time="0.236" tests="18" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="AU"/>
     <property name="sun.boot.library.path" value="C:\Users\antho\.jdks\corretto-21.0.6\bin"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\antho\AppData\Local\Temp\surefire13250414084695981300 2025-04-20T20-06-18_961-jvmRun1 surefire-20250420200619272_1tmp surefire_0-20250420200619272_2tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\antho\AppData\Local\Temp\surefire2514285468094931873 2025-04-20T20-19-06_787-jvmRun1 surefire-20250420201907082_1tmp surefire_0-20250420201907082_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\antho\OneDrive - Queensland University of Technology\Sem_1_2025\CAB302\Practicals\Week 8\address-book\target\test-classes;C:\Users\antho\.m2\repository\org\openjfx\javafx-controls\21\javafx-controls-21.jar;C:\Users\antho\.m2\repository\org\openjfx\javafx-graphics\21\javafx-graphics-21.jar;C:\Users\antho\.m2\repository\org\openjfx\javafx-base\21\javafx-base-21.jar;C:\Users\antho\.m2\repository\org\openjfx\javafx-fxml\21\javafx-fxml-21.jar;C:\Users\antho\.m2\repository\org\apache\maven\plugins\maven-surefire-plugin\3.5.3\maven-surefire-plugin-3.5.3.jar;C:\Users\antho\.m2\repository\org\apache\maven\surefire\surefire-api\3.5.3\surefire-api-3.5.3.jar;C:\Users\antho\.m2\repository\org\apache\maven\surefire\surefire-logger-api\3.5.3\surefire-logger-api-3.5.3.jar;C:\Users\antho\.m2\repository\org\apache\maven\surefire\surefire-shared-utils\3.5.3\surefire-shared-utils-3.5.3.jar;C:\Users\antho\.m2\repository\org\apache\maven\surefire\surefire-extensions-api\3.5.3\surefire-extensions-api-3.5.3.jar;C:\Users\antho\.m2\repository\org\apache\maven\surefire\maven-surefire-common\3.5.3\maven-surefire-common-3.5.3.jar;C:\Users\antho\.m2\repository\org\apache\maven\surefire\surefire-booter\3.5.3\surefire-booter-3.5.3.jar;C:\Users\antho\.m2\repository\org\apache\maven\surefire\surefire-extensions-spi\3.5.3\surefire-extensions-spi-3.5.3.jar;C:\Users\antho\.m2\repository\org\apache\maven\resolver\maven-resolver-util\1.4.1\maven-resolver-util-1.4.1.jar;C:\Users\antho\.m2\repository\org\apache\maven\resolver\maven-resolver-api\1.4.1\maven-resolver-api-1.4.1.jar;C:\Users\antho\.m2\repository\org\apache\maven\shared\maven-common-artifact-filters\3.4.0\maven-common-artifact-filters-3.4.0.jar;C:\Users\antho\.m2\repository\org\codehaus\plexus\plexus-java\1.4.0\plexus-java-1.4.0.jar;C:\Users\antho\.m2\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;C:\Users\antho\.m2\repository\com\thoughtworks\qdox\qdox\2.2.0\qdox-2.2.0.jar;C:\Users\antho\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\antho\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\antho\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\antho\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\antho\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\antho\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -61,27 +61,27 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testSearchPartialQuery" classname="ContactManagerTest" time="0.015">
+  <testcase name="testSearchPartialQuery" classname="ContactManagerTest" time="0.018">
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 ]]></system-err>
   </testcase>
-  <testcase name="testSearchByFirstnameCorrectNumberNormalCase" classname="ContactManagerTest" time="0.001"/>
-  <testcase name="testSearchByFirstnameMultipleMatchingContacts" classname="ContactManagerTest" time="0.001"/>
+  <testcase name="testSearchByFirstnameCorrectNumberNormalCase" classname="ContactManagerTest" time="0.002"/>
+  <testcase name="testSearchByFirstnameMultipleMatchingContacts" classname="ContactManagerTest" time="0.0"/>
   <testcase name="testSearchByEmail" classname="ContactManagerTest" time="0.001"/>
-  <testcase name="testSearchByPhone" classname="ContactManagerTest" time="0.001"/>
-  <testcase name="testSearchByPhoneCorrectNumber" classname="ContactManagerTest" time="0.0"/>
-  <testcase name="testReturnAllContactsWithEmptySearchQuery" classname="ContactManagerTest" time="0.002"/>
+  <testcase name="testSearchByPhone" classname="ContactManagerTest" time="0.003"/>
+  <testcase name="testSearchByPhoneCorrectNumber" classname="ContactManagerTest" time="0.001"/>
+  <testcase name="testReturnAllContactsWithEmptySearchQuery" classname="ContactManagerTest" time="0.001"/>
   <testcase name="testSearchNoResults" classname="ContactManagerTest" time="0.001"/>
   <testcase name="testSearchByFirstnameCorrectNumberLowerCase" classname="ContactManagerTest" time="0.001"/>
-  <testcase name="testSearchByEmailCorrectNumber" classname="ContactManagerTest" time="0.001"/>
+  <testcase name="testSearchByEmailCorrectNumber" classname="ContactManagerTest" time="0.0"/>
   <testcase name="testSearchByLastnameCorrectNumber" classname="ContactManagerTest" time="0.001"/>
-  <testcase name="testSearchByFirstnameCorrectNumberUpperCase" classname="ContactManagerTest" time="0.001"/>
-  <testcase name="testSearchByFullName" classname="ContactManagerTest" time="0.0"/>
-  <testcase name="testSearchCaseInsensitive" classname="ContactManagerTest" time="0.0"/>
-  <testcase name="testNumberSearchCaseInsensitive" classname="ContactManagerTest" time="0.0"/>
+  <testcase name="testSearchByFirstnameCorrectNumberUpperCase" classname="ContactManagerTest" time="0.003"/>
+  <testcase name="testSearchByFullName" classname="ContactManagerTest" time="0.002"/>
+  <testcase name="testSearchCaseInsensitive" classname="ContactManagerTest" time="0.001"/>
+  <testcase name="testNumberSearchCaseInsensitive" classname="ContactManagerTest" time="0.003"/>
   <testcase name="testReturnAllContactsWithNullSearchQuery" classname="ContactManagerTest" time="0.001"/>
   <testcase name="testSearchEmptyContacts" classname="ContactManagerTest" time="0.001"/>
-  <testcase name="testSearchByEmailSameSection" classname="ContactManagerTest" time="0.001"/>
+  <testcase name="testSearchByEmailSameSection" classname="ContactManagerTest" time="0.0"/>
 </testsuite>
