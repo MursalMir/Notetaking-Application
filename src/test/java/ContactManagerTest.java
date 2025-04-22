@@ -14,13 +14,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class ContactManagerTest {
 
-    /**
-     * test class
-     */
+
     private ContactManager contactManager;
-    private static final String EMPTY_STRING = new String("");
+    private static final String EMPTY_STRING = "";
     private static final String NULL_STRING = null;
-    private Contact[] contacts = {
+    private static final Contact[] contacts = {
             new Contact("John", "Smith", "john.smith@abc.com", "4454844847" ),
             new Contact("Albert", "Wiseman", "wise@wiseworks.com", "67832682"),
             new Contact("Amy", "Lutz", "amy@cabthree.com", "2232324"),
@@ -172,7 +170,5 @@ public class ContactManagerTest {
         assertEquals(1, contacts.size());
 
     }
-
-
 
 }

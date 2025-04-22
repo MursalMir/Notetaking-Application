@@ -1,3 +1,4 @@
+com\example\addressbook\model\ContactManager$SearchType.class
 com\example\addressbook\HelloApplication.class
 com\example\addressbook\controller\MainController.class
 com\example\addressbook\model\Contact.class

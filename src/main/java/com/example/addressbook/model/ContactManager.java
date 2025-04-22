@@ -17,6 +17,7 @@ public class ContactManager {
         connection = new SqliteContactDAO();
     }
 
+    //dj
     public List<Contact> searchContacts(String query) {
 
         List<Contact> allContacts = new ArrayList<>();
