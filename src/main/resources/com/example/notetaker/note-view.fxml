@@ -1,23 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.notetaker.controller.NoteController"
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.notetaker.controller.NoteController"
+            prefHeight="600" prefWidth="800"
+            style="-fx-background-color: linear-gradient(to bottom right, #eef3f9, #ffffff);">
 
-      style="-fx-padding: 20">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+            <Button text="← Back to Dashboard"
+                    onAction="#returnToHome"
+                    style="-fx-font-size: 14px; -fx-background-color: #d3e0f0; -fx-border-radius: 5; -fx-background-radius: 5;" />
+        </HBox>
+    </top>
 
-    <Label text="Title"/>
-    <TextField fx:id="titleField" promptText="Enter note title"/>
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="20">
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
 
-    <Label text="Content"/>
-    <TextArea fx:id="contentArea" promptText="Enter note content" prefRowCount="6"/>
+            <Label text="📝 Create a New Note"
+                   style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2a4d69; -fx-effect: dropshadow(gaussian, #b0c4de, 4, 0.3, 0, 2); -fx-font-family: 'Segoe UI', sans-serif;" />
 
-    <Button text="Save Note" onAction="#saveNote"/>
+            <VBox spacing="15" maxWidth="600">
 
-    <Label text="Saved Notes:"/>
-    <ListView fx:id="noteList" prefHeight="200"/>
+                <Label text="🖊 Title"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #333333; -fx-font-family: 'Segoe UI', sans-serif;" />
+                <TextField fx:id="titleField"
+                           promptText="Enter note title"
+                           maxWidth="600"
+                           style="-fx-font-size: 14px;" />
 
-</VBox>
+                <Label text="📝 Content"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #333333; -fx-font-family: 'Segoe UI', sans-serif;" />
+                <TextArea fx:id="contentArea"
+                          promptText="Enter note content"
+                          prefRowCount="10"
+                          maxWidth="600"
+                          style="-fx-font-size: 14px;" />
+            </VBox>
+
+            <Button text="💾 Save Note"
+                    onAction="#saveNote"
+                    style="-fx-font-size: 14px; -fx-background-color: #4a90e2; -fx-text-fill: white; -fx-padding: 10 30; -fx-background-radius: 8;" />
+        </VBox>
+    </center>
+</BorderPane>

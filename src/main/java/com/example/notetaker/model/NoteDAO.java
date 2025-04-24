@@ -33,11 +33,12 @@ public class NoteDAO {
 
     public static List<Note> getAllNotes() {
         List<Note> notes = new ArrayList<>();
+        Note note;
         try (Connection conn = DriverManager.getConnection(DB_URL);
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery("SELECT * FROM notes")) {
             while (rs.next()) {
-                Note note = new Note(rs.getString("title"), rs.getString("content"));
+                note = new Note(rs.getString("title"), rs.getString("content"));
                 note.setId(rs.getInt("id"));
                 notes.add(note);
             }
@@ -45,5 +46,20 @@ public class NoteDAO {
             e.printStackTrace();
         }
         return notes;
+
+
+    }
+    public static void updateNote(Note note)
+    {
+        String sql = "UPDATE notes SET title = ?, content = ? WHERE id = ?";
+        try (Connection conn = DriverManager.getConnection(DB_URL);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, note.getTitle());
+            pstmt.setString(2, note.getContent());
+            pstmt.setInt(3, note.getId());
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
