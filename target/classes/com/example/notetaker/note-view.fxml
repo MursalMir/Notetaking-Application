@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.notetaker.controller.NoteController"
+
+      style="-fx-padding: 20">
+
+    <Label text="Title"/>
+    <TextField fx:id="titleField" promptText="Enter note title"/>
+
+    <Label text="Content"/>
+    <TextArea fx:id="contentArea" promptText="Enter note content" prefRowCount="6"/>
+
+    <Button text="Save Note" onAction="#saveNote"/>
+
+    <Label text="Saved Notes:"/>
+    <ListView fx:id="noteList" prefHeight="200"/>
+
+</VBox>

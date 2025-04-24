@@ -1,13 +1,8 @@
-module com.example.addressbook {
+module com.example.notetaker {
     requires javafx.controls;
     requires javafx.fxml;
-    requires org.xerial.sqlitejdbc;
+    requires java.sql;
 
-
-    opens com.example.addressbook to javafx.fxml;
-    exports com.example.addressbook;
-    exports com.example.addressbook.controller;
-    opens com.example.addressbook.controller to javafx.fxml;
-    exports com.example.addressbook.model;
-    opens com.example.addressbook.model to javafx.fxml;
+    opens com.example.notetaker.controller to javafx.fxml;
+    exports com.example.notetaker;
 }
