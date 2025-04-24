@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <?import javafx.scene.layout.VBox?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.TextArea?>
-
-
 <?import javafx.scene.control.Button?>
+
+<!--Placeholder GUI elements to be replaced later-->
+
 <VBox alignment="TOP_LEFT" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.ainotetaking.controller.NoteController">
+      fx:controller="com.example.notetaker.controller.PlaceholderNoteTakingWindowController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>

@@ -1,10 +1,8 @@
-package com.example.ainotetaking;
-
+package com.example.notetaker;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import java.io.IOException;
 
 /**
  * Modified from CAB302 Address Book application https://github.com/cab302-qut/address-book.git
@@ -16,9 +14,9 @@ public class Main extends Application {
     public static final int HEIGHT = 360;
 
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/com/example/ainotetaking/NoteTakingWindow.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), WIDTH, HEIGHT);
+    public void start(Stage stage) throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/notetaker/PlaceholderNoteTakingWindow.fxml"));
+        Scene scene = new Scene(loader.load(), WIDTH, HEIGHT);
         stage.setTitle(TITLE);
         stage.setScene(scene);
         stage.show();
