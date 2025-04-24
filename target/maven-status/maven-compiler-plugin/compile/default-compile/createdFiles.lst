@@ -1,12 +1,4 @@
-com\example\addressbook\model\ContactManager$SearchType.class
-com\example\addressbook\HelloApplication.class
-com\example\addressbook\controller\MainController.class
-com\example\addressbook\model\Contact.class
-com\example\addressbook\controller\MainController$1.class
-com\example\addressbook\model\SqliteConnection.class
-com\example\addressbook\controller\HelloController.class
-com\example\addressbook\model\MockContactDAO.class
-com\example\addressbook\model\SqliteContactDAO.class
-com\example\addressbook\model\ContactManager.class
+com\example\notetaker\model\LearningMaterial.class
 module-info.class
-com\example\addressbook\model\IContactDAO.class
+com\example\notetaker\controller\NoteController.class
+com\example\notetaker\model\Note.class
