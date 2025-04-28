@@ -1,8 +1,11 @@
 package com.example.notetaker;
+import com.example.notetaker.service.OllamaConnection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.net.http.HttpClient;
 
 /**
  * Modified from CAB302 Address Book application https://github.com/cab302-qut/address-book.git
