@@ -12,14 +12,30 @@
     <top>
         <VBox alignment="TOP_LEFT">
             <padding><Insets top="10" left="10" right="10" bottom="0"/></padding>
-            <Button text="← Back to Dashboard" onAction="#returnToHome"/>
+            <Button fx:id="backToDashboardButton" text="← Back to Dashboard" onAction="#returnToHome"/>
         </VBox>
     </top>
 
     <center>
-        <VBox alignment="CENTER" spacing="10.0">
-            <padding><Insets top="30" left="30" right="30" bottom="30"/></padding>
-            <Label fx:id="placeholderLabel" text="AI logic goes here" />
+        <VBox alignment="TOP_LEFT" spacing="20.0" xmlns:fx="http://javafx.com/fxml">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+
+            <TextArea fx:id="noteEntryArea"
+                      wrapText="true"
+                      editable="true"
+            />
+
+            <TextArea fx:id="expandedNoteArea"
+                      wrapText="true"
+                      editable="false"
+            />
+
+            <Button fx:id="generateButton"
+                    text="Generate"
+                    onAction="#onGenerateButtonClick"
+            />
         </VBox>
     </center>
 </BorderPane>
