@@ -31,7 +31,7 @@ public class LoginController {
             // Successful login
             // Successful login
             try {
-                Parent root = FXMLLoader.load(getClass().getResource("/com/example/notetaker/PlaceholderNoteTakingWindow.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("/com/example/notetaker/MainView.fxml"));
                 Stage stage = (Stage) usernameField.getScene().getWindow();
                 stage.setScene(new Scene(root));
                 stage.show();
