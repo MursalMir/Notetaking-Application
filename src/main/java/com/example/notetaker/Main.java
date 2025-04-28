@@ -15,7 +15,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/notetaker/PlaceholderNoteTakingWindow.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/notetaker/Login.fxml"));
         Scene scene = new Scene(loader.load(), WIDTH, HEIGHT);
         stage.setTitle(TITLE);
         stage.setScene(scene);

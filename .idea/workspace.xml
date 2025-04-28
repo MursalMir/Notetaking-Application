@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e9cb17e-5831-4110-abff-bba00974bc3e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/notetaker/controller/PlaceholderNoteTakingWindowController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/NoteTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/OllamaConnectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/notetaker/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/notetaker/controller/RegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/notetaker/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/notetaker/Login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/notetaker/Register.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ainotetaking/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/notetaker/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ainotetaking/controller/NoteController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ainotetaking/model/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/notetaker/model/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ainotetaking/service/AIService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/notetaker/service/OllamaConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/ainotetaking/NoteTakingWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/notetaker/PlaceholderNoteTakingWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/notetaker/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/notetaker/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +22,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -43,12 +41,12 @@
     &quot;assignee&quot;: &quot;Rua-dri&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Kingra007/CAB302_steve.git&quot;,
-    &quot;accountId&quot;: &quot;1a77ea0e-7763-43f9-b522-b96d1531883c&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Kingra007/CAB302_steve.git",
+    "accountId": "0f1c1a16-806e-4cda-b038-6522d09baebc"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/resources/com/example/ainotetaking/NoteTakingWindow.fxml" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -56,6 +54,7 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2w4wb0i5B4sq5F1i0VUeqP3OxZe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -64,9 +63,12 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "JUnit.NoteTest.executor": "Run",
+    "Maven.ai-notetaking-app [clean].executor": "Run",
+    "Maven.ai-notetaking-app [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "AI-Integration",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/roryo/Downloads",
