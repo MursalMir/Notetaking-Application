@@ -14,6 +14,14 @@ import java.net.http.HttpResponse;
 public class OllamaConnection {
     private static final String OLLAMA_URL = "http://localhost:11434/api/generate";
     private static final String MODEL_NAME = "gemma3";
+    public static final String PROMPT_PREFIX = "Expand the following sparse study notes into clear, structured, brief, and concise study notes. "
+            + "Use headings, dot points, and explanations where needed. Include only these notes in your "
+            + "response - do not add introductions, conclusions or questions. Only output the improved notes "
+            + "as the response will be saved as a page of notes to be studied. \n\nNotes:\n";
+
+
+    private final HttpClient httpClient = HttpClient.newHttpClient();
+
 
     /**
      * Converts user-written notes into improved, expanded, AI-generated study notes
@@ -38,12 +46,9 @@ public class OllamaConnection {
      * @param userInput The user-written study notes for the AI to improve
      * @return The full prompt string to be sent to the AI
      */
-    private String generatePrompt(String userInput) {
+    public String generatePrompt(String userInput) {
         // Adds a string on to the beginning of each prompt send to the LLM.
-        return "Expand the following sparse study notes into clear, structured, brief, and concise study notes. "
-                + "Use headings, dot points, and explanations where needed. Include only these notes in your "
-                + "response - do not add introductions, conclusions or questions. Only output the improved notes "
-                + "as the response will be saved as a page of notes to be studied. \n\nNotes:\n" + userInput;
+        return PROMPT_PREFIX + userInput;
     }
 
     /**
@@ -51,7 +56,7 @@ public class OllamaConnection {
      * @param prompt The prompt to include in the request
      * @return A string containing a valid Ollama HTTP request
      */
-    private String createRequestBody(String prompt) {
+    public String createRequestBody(String prompt) {
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty("model", MODEL_NAME);
         jsonObject.addProperty("prompt", prompt);
@@ -64,16 +69,15 @@ public class OllamaConnection {
      * @param requestBody A string to be added to the body of the HTTP request
      * @return A JsonObject containing the full response from the LLM, or an error JsonObject if the request failed.
      */
-    private JsonObject sendRequest(String requestBody) {
+    public JsonObject sendRequest(String requestBody) {
         try {
-            HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(OLLAMA_URL))
                     .header("Content-Type", "application/json")
                     .POST(HttpRequest.BodyPublishers.ofString(requestBody))
                     .build();
 
-            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
             String responseBody = response.body();
 
 
