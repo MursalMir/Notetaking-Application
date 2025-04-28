@@ -1,0 +1,4 @@
+com\example\notetaker\model\LearningMaterial.class
+module-info.class
+com\example\notetaker\controller\NoteController.class
+com\example\notetaker\model\Note.class
