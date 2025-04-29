@@ -36,5 +36,19 @@ public class LearningMaterialTest {
     }
 
     @Test
-    public void 
+    public void testGetFilepath() {
+        assertEquals(FILEPATH, material.getFilepath());
+    }
+
+    @Test
+    public void testSetFilepath() {
+        material.setFilepath(NEW_FILEPATH);
+        assertEquals(NEW_FILEPATH, material.getFilepath());
+    }
+
+    @Test
+    public void testToString() {
+        String expected = FILENAME + " ("+ FILEPATH + ")";
+        assertEquals(expected, material.toString());
+    }
 }
