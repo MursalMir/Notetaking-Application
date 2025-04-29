@@ -13,8 +13,7 @@ import java.net.http.HttpResponse;
  */
 public class OllamaConnection {
     private static final String OLLAMA_URL = "http://localhost:11434/api/generate";
-    public static final String MODEL_NAME = "gemma3";
-    public static final String ERR_NO_INPUT = "Please enter notes to be expanded upon.";
+    private static final String MODEL_NAME = "gemma3";
     public static final String PROMPT_PREFIX = "Expand the following sparse study notes into clear, structured, brief, and concise study notes. "
             + "Use headings, dot points, and explanations where needed. Include only these notes in your "
             + "response - do not add introductions, conclusions or questions. Only output the improved notes "
@@ -30,10 +29,6 @@ public class OllamaConnection {
      * @return AI-Generated study notes. Returns an error if there is no response field in the JSON response
      */
     public String generateExpandedNotes(String userInput) {
-
-        if (userInput == null) {
-            return ERR_NO_INPUT;
-        }
         String prompt = generatePrompt(userInput);
         String requestBody = createRequestBody(prompt);
         JsonObject jsonResponse = sendRequest(requestBody);
@@ -52,14 +47,8 @@ public class OllamaConnection {
      * @return The full prompt string to be sent to the AI
      */
     public String generatePrompt(String userInput) {
-        if (userInput == null) {
-            return null;
-        }
-        else {
-            // Adds a string on to the beginning of each prompt send to the LLM.
-            return PROMPT_PREFIX + userInput;
-        }
-
+        // Adds a string on to the beginning of each prompt send to the LLM.
+        return PROMPT_PREFIX + userInput;
     }
 
     /**

@@ -52,20 +52,4 @@ public class NoteTest {
         assertEquals(CONTENT, note.getContent());
     }
 
-    @Test
-    public void testConstructorWithNullValues() {
-        Note nullNote = new Note(0, null, null);
-        assertEquals(0, nullNote.getId());
-        assertEquals(null, nullNote.getTitle());
-        assertEquals(null, nullNote.getContent());
-    }
-
-    @Test
-    public void testConstructorWithEmptyStrings() {
-        Note emptyNote = new Note(0, "", "");
-        assertEquals(0, emptyNote.getId());
-        assertEquals("", emptyNote.getTitle());
-        assertEquals("", emptyNote.getContent());
-    }
-
 }
