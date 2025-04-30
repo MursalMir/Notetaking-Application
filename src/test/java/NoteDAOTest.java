@@ -32,7 +32,6 @@ public class NoteDAOTest {
         assertEquals(TITLE, retrievedNote.getTitle());
         assertEquals(CONTENT, retrievedNote.getContent());
     }
-
     @Test
     public void testUpdateNote() {
         List<Note> notes = NoteDAO.getAllNotes();
