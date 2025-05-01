@@ -10,9 +10,9 @@ import java.io.IOException;
 public class MainController {
 
     @FXML
-    private StackPane contentArea;  // fx:id must match the one in MainView.fxml
+    public StackPane contentArea;  // fx:id must match the one in MainView.fxml
 
-    private void switchView(String fxmlFile) {
+    public void switchView(String fxmlFile) {
         try {
             System.out.println("Loading FXML: " + fxmlFile);
             Node view = FXMLLoader.load(getClass().getResource("/com/example/notetaker/" + fxmlFile));

@@ -30,6 +30,9 @@
 
             <Button text="✏️ Edit Selected Note" onAction="#editSelectedNote"
                     style="-fx-padding: 10 24; -fx-background-color: #f39c12; -fx-font-size: 14px; -fx-text-fill: white; -fx-background-radius: 10;"/>
+
+            <Button text="🗑️ Delete Selected Note" onAction="#deleteSelectedNote"
+                    style="-fx-padding: 10 24; -fx-background-color: #e74c3c; -fx-font-size: 14px; -fx-text-fill: white; -fx-background-radius: 10;"/>
         </VBox>
     </center>
 </BorderPane>
