@@ -10,7 +10,7 @@ import java.io.IOException;
 public class MainController {
 
     @FXML
-    public StackPane contentArea;  // fx:id must match the one in MainView.fxml
+    public StackPane contentArea;
 
     public void switchView(String fxmlFile) {
         try {

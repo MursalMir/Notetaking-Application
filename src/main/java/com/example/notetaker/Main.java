@@ -14,8 +14,8 @@ import java.net.http.HttpClient;
 public class Main extends Application {
 
     public static final String TITLE = "Note Taker Dashboard";
-    public static final int WIDTH = 640;
-    public static final int HEIGHT = 360;
+    public static final int WIDTH = 800;
+    public static final int HEIGHT = 600;
 
     @Override
     public void start(Stage stage) throws Exception {

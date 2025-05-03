@@ -44,7 +44,7 @@ public class RegisterController {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/com/example/notetaker/Login.fxml"));
             Stage stage = (Stage) usernameField.getScene().getWindow();
-            stage.setScene(new Scene(root, 640, 360));
+            stage.setScene(new Scene(root, 800, 600));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
