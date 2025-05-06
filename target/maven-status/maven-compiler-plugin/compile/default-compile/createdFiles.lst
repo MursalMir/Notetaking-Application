@@ -4,6 +4,7 @@ com\example\notetaker\model\Note.class
 com\example\notetaker\controller\LoginController.class
 com\example\notetaker\model\FileUploadDAO.class
 com\example\notetaker\controller\SavedNotesController.class
+com\example\notetaker\model\User.class
 module-info.class
 com\example\notetaker\controller\EditNoteController.class
 com\example\notetaker\model\LearningMaterial.class
@@ -12,6 +13,7 @@ com\example\notetaker\service\UserService.class
 com\example\notetaker\controller\PlaceholderNoteTakingWindowController.class
 com\example\notetaker\controller\AIViewController.class
 com\example\notetaker\controller\MainController.class
+com\example\notetaker\model\UserDAO.class
 com\example\notetaker\service\OllamaConnection.class
 com\example\notetaker\model\FileParser.class
 com\example\notetaker\controller\NoteController.class

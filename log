@@ -1,0 +1,68 @@
+d8b9801 was g, 12 hours ago, message: Merge pull request #7 from Kingra007/updatedUI1
+fd0c304 was tutpikz, 13 hours ago, message: consistent UI for login register and dashboard
+83c699d was tutpikz, 2 days ago, message: Merge branch 'main' of https://github.com/Kingra007/CAB302_steve register login consistentcy in dsign
+3816250 was tutpikz, 2 days ago, message: save ui changes to login
+d5112d3 was Mursal Mir, 3 days ago, message: added a delete button to the saved notes page that now deletes saved notes from the database. Also added an alert system which still needs to be further implemented properly.
+eeb37a5 was Mursal Mir, 3 days ago, message: Added a login database. - Created UserDAO for SQLite operations.
+141957f was g, 3 days ago, message: Merge pull request #6 from Kingra007/gladys-testcases
+eae4536 was tutpikz, 3 days ago, message: added test cases for MainController (page navigation)
+0b9dba6 was Rua-dri, 4 days ago, message: Resolved pull merge conflicts
+28ede09 was Rua-dri, 4 days ago, message: Fixed edit notes functionality before checkpoint. Added NoteDAOTest written by Mursal
+1249d3b was Mursal Mir, 4 days ago, message: notecases
+bde70eb was Rua-dri, 5 days ago, message: Merge pull request #5 from Kingra007/rory/testcases
+64183b7 was Rua-dri, 5 days ago, message: Added more tests to NoteTest and OllamaConnectionTest. Added some error messages to AI functionality.
+82f365a was Tyrell, 5 days ago, message: updating .gitignore to ignore notes.db
+45a911c was Tyrell, 5 days ago, message: updating .gitignore to ignore notes.db
+b676f38 was Tyrell, 5 days ago, message: Added functional upload button to AI View, added listview to see saved materials, modified fxml for ai view page. Added unit tests, removed notes.db from tracking - added to .gitignore
+83358f6 was Rua-dri, 5 days ago, message: Merge branch 'main' of https://github.com/Kingra007/CAB302_steve
+1bffbcd was Rua-dri, 5 days ago, message: Set the initial window to the login window & made the login button redirect to the main view.
+ec5bd3a was Tyrell, 5 days ago, message: adding file parser, upload functionality and file data structure to main build
+4de4ae0 was Rua-dri, 5 days ago, message: updated .github/workflows/maven.yml to try and fix github CI issue
+23ea8f4 was Rua-dri, 5 days ago, message: Merged all of our branches with main. Moved AI functionality from the placeholder window into the AI view
+d1cf557 was Rua-dri, 5 days ago, message: Merged Mursal's branch containing his + Gladys' work into main.
+04e601b was Rua-dri, 5 days ago, message: Added misc.xml to gitignore
+d8af3a9 was Rua-dri, 5 days ago, message: Merge pull request #4 from Kingra007/AI-Integration
+4a8c9d9 was Rua-dri, 5 days ago, message: Resolved merge conflict on workspace.xml (keep local ignored version)
+6154cd9 was Rua-dri, 5 days ago, message: Added .idea/workspace.xml to gitignore
+72bf98a was Rua-dri, 5 days ago, message: Small refactors, more tests added
+aeda334 was Kingra007, 5 days ago, message: Added Login and Register screens with basic user authentication flow
+b0b82b1 was Tyrell, 9 days ago, message: Added upload functionality, parsing of uploaded files and database insertion for uploaded files
+77fd58e was Rua-dri, 9 days ago, message: Merge pull request #2 from Kingra007/AI-Integration
+54b23c0 was Rua-dri, 9 days ago, message: Refactored OllamaConnection, changed Note, Main, and the package name to match other branches. Added some unit tests for Note.
+91338bb was Mursal Mir, 9 days ago, message: fixed a mistake also removed unnecessary files
+b85f500 was Mursal Mir, 9 days ago, message: Merged mine and Gladys's work, also made it more aesthetically pleasing
+620d038 was Mursal Mir, 9 days ago, message: Added note-taking functionality with DB
+8f021b2 was Rua-dri, 9 days ago, message: Merge pull request #1 from Kingra007/AI-Integration
+c4c9889 was Rua-dri, 10 days ago, message: Added first iteration of AI integration with using a local ollama server with the gemma3 LLM. Also added a couple of UI elements for testing.
+31d265e was Anthony Gough, 12 days ago, message: dcsd
+879d85b was Anthony Gough, 13 days ago, message: Merge branch 'main' of github.com:AnthonyGough/prac8tempdb Update the build maven actions file for GitHub
+362aea6 was Anthony Gough, 13 days ago, message: Update pom file with surefire
+b3eb995 was Anthony Gough, 13 days ago, message: Create maven.yml for running Unit Test Suite and Report
+8cd4ec4 was Anthony Gough, 13 days ago, message: Temp Database TDD Example
+225b05d was Kingra007, 5 weeks ago, message: Add Main.java for CAB302 assignment
+4912a75 was Kingra007, 5 weeks ago, message: Removing files for new project
+bcdbc6a was tutpikz, 6 weeks ago, message: added signature
+e2e580c was Mursal Mir, 6 weeks ago, message: added signature
+d17df52 was Tyrell, 6 weeks ago, message: Adding signature to collabfile again
+667be11 was tutpikz, 6 weeks ago, message: hello mess
+b371189 was Tyrell, 6 weeks ago, message: removing signature for demonstration
+1c703dc was Tyrell, 6 weeks ago, message: Removing merge text Merge branch 'main' of https://github.com/Kingra007/CAB302_steve
+312c092 was Tyrell, 6 weeks ago, message: removing merge conflict text
+645a96c was Rua-dri, 6 weeks ago, message: Merge branch 'main' of https://github.com/Kingra007/CAB302_steve
+bed27a4 was Tyrell, 6 weeks ago, message: adding signature to document
+3180f5b was Tyrell, 6 weeks ago, message: making sure I can upload new files to the repo
+4c05c5c was Rua-dri, 6 weeks ago, message: Merge branch 'main' of https://github.com/Kingra007/CAB302_steve
+7b0b7dc was Rua-dri, 6 weeks ago, message: Merge branch 'main' of https://github.com/Kingra007/CAB302_steve
+9cd4c06 was Mursal Mir, 6 weeks ago, message: signed by Mursal
+de3e77f was Rua-dri, 6 weeks ago, message: Update collabfile
+115e1ba was Mursal Mir, 6 weeks ago, message: signed by Mursal
+bfc98ec was Tyrell, 6 weeks ago, message: Verifying the signature is updated
+f787052 was Rua-dri, 6 weeks ago, message: Merge branch 'main' of https://github.com/Kingra007/CAB302_steve
+018e9d6 was Rua-dri, 6 weeks ago, message: Rory signing collabfile
+779f1d1 was Kingra007, 6 weeks ago, message: Create README.md
+2a99141 was Rua-dri, 6 weeks ago, message: Merge branch 'main' of https://github.com/Kingra007/CAB302_steve
+691ec70 was Rua-dri, 6 weeks ago, message: Added test file
+33341ee was Tyrell, 6 weeks ago, message: creation of collaboration document
+ca049e8 was Mursal Mir, 6 weeks ago, message: Updated HelloApplication UI title and added launch message
+cb51f70 was Mursal Mir, 6 weeks ago, message: Initial commit - JavaFX HelloApplication
+f47fd5d was Mursal Mir, 6 weeks ago, message: Initial commit - JavaFX HelloApplication

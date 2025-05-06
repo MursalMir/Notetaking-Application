@@ -72,4 +72,34 @@ public class NoteDAO {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Method to search the Notes database for notes containing a string
+     * @param searchWord The user input search string
+     * @return An ArrayList of Note objects with their ID, title, and content.
+     */
+    public List<Note> searchNotesByContent(String searchWord) {
+       List<Note> matchedNotes = new ArrayList<>();
+       String sql = "SELECT * FROM notes WHERE content LIKE ?";
+
+       try(Connection conn = DriverManager.getConnection(DB_URL);
+           PreparedStatement statement = conn.prepareStatement(sql)) {
+
+           statement.setString(1, "%" + searchWord + "%");
+           ResultSet searchresults = statement.executeQuery();
+
+           while (searchresults.next()) {
+               int id = searchresults.getInt("id");
+               String title = searchresults.getString("title");
+               String content = searchresults.getString("content");
+
+               matchedNotes.add(new Note(id, title, content));
+           }
+       } catch (SQLException e) {
+           e.printStackTrace();
+       }
+
+       return matchedNotes;
+
+    }
 }
