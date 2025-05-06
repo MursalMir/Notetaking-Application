@@ -62,4 +62,14 @@ public class NoteDAO {
             e.printStackTrace();
         }
     }
+    public static void deleteNote(Note note) {
+        String sql = "DELETE FROM notes WHERE id = ?";
+        try (Connection conn = DriverManager.getConnection(DB_URL);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, note.getId());
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

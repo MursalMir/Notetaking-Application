@@ -5,13 +5,6 @@ import java.util.Map;
 
 public class UserService {
     private static UserService instance = null;
-    private Map<String, String> users;
-
-    private UserService() {
-        users = new HashMap<>();
-        // Optional: add a default user for testing
-        users.put("admin", "password");
-    }
 
     public static UserService getInstance() {
         if (instance == null) {
@@ -21,14 +14,14 @@ public class UserService {
     }
 
     public boolean login(String username, String password) {
-        return users.containsKey(username) && users.get(username).equals(password);
+        return com.example.notetaker.model.UserDAO.getUserByUsername(username)
+                .map(user -> user.getPassword().equals(password))
+                .orElse(false);
     }
 
     public boolean register(String username, String password) {
-        if (users.containsKey(username)) {
-            return false; // Username already exists
-        }
-        users.put(username, password);
-        return true;
+        return com.example.notetaker.model.UserDAO.registerUser(
+                new com.example.notetaker.model.User(username, password)
+        );
     }
 }
