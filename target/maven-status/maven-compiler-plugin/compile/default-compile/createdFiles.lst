@@ -10,7 +10,6 @@ com\example\notetaker\controller\EditNoteController.class
 com\example\notetaker\model\LearningMaterial.class
 com\example\notetaker\controller\RegisterController.class
 com\example\notetaker\service\UserService.class
-com\example\notetaker\controller\PlaceholderNoteTakingWindowController.class
 com\example\notetaker\controller\AIViewController.class
 com\example\notetaker\controller\MainController.class
 com\example\notetaker\model\UserDAO.class

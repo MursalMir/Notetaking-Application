@@ -2,17 +2,24 @@ package com.example.notetaker.controller;
 
 import com.example.notetaker.model.Note;
 import com.example.notetaker.model.NoteDAO;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.util.List;
 
 public class SavedNotesController {
 
-    @FXML private ListView<Note> notesListView;
+    @FXML
+    private ListView<Note> notesListView;
+
+    @FXML
+    private TextField searchField;
 
     @FXML
     public void initialize() {
@@ -66,5 +73,11 @@ public class SavedNotesController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void searchNotes(ActionEvent actionEvent) {
+        String keyword = searchField.getText().trim();
+        List<Note> results = NoteDAO.searchNotesByContent(keyword);
+        notesListView.getItems().setAll(results);
     }
 }

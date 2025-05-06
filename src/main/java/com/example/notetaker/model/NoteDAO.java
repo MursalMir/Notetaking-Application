@@ -78,7 +78,7 @@ public class NoteDAO {
      * @param searchWord The user input search string
      * @return An ArrayList of Note objects with their ID, title, and content.
      */
-    public List<Note> searchNotesByContent(String searchWord) {
+    public static List<Note> searchNotesByContent(String searchWord) {
        List<Note> matchedNotes = new ArrayList<>();
        String sql = "SELECT * FROM notes WHERE content LIKE ?";
 
@@ -86,12 +86,12 @@ public class NoteDAO {
            PreparedStatement statement = conn.prepareStatement(sql)) {
 
            statement.setString(1, "%" + searchWord + "%");
-           ResultSet searchresults = statement.executeQuery();
+           ResultSet searchResults = statement.executeQuery();
 
-           while (searchresults.next()) {
-               int id = searchresults.getInt("id");
-               String title = searchresults.getString("title");
-               String content = searchresults.getString("content");
+           while (searchResults.next()) {
+               int id = searchResults.getInt("id");
+               String title = searchResults.getString("title");
+               String content = searchResults.getString("content");
 
                matchedNotes.add(new Note(id, title, content));
            }
