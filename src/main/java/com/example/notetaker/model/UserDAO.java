@@ -49,4 +49,18 @@ public class UserDAO {
         }
         return Optional.empty();
     }
+
+
+    public static boolean deleteUser(String username) {
+        String sql = "DELETE FROM users WHERE username = ?";
+        try (Connection conn = DriverManager.getConnection(DB_URL);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, username);
+            return pstmt.executeUpdate() > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 }

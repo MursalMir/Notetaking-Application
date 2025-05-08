@@ -1,6 +1,8 @@
 import com.example.notetaker.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import com.example.notetaker.model.UserDAO;
+import org.junit.jupiter.api.AfterEach;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -11,6 +13,7 @@ public class UserServiceTest {
     @BeforeEach
     void setUp() {
         service = UserService.getInstance();
+        cleanUp();
     }
 
     @Test
@@ -44,5 +47,14 @@ public class UserServiceTest {
     void testLoginNonExistentUser() {
         boolean result = service.login("ghostuser", "any");
         assertFalse(result, "Should fail login for unknown user");
+    }
+
+    @AfterEach
+    void cleanUp() {
+        UserDAO.deleteUser("testuser");
+        UserDAO.deleteUser("dupeuser");
+        UserDAO.deleteUser("validuser");
+        UserDAO.deleteUser("loginuser");
+        UserDAO.deleteUser("ghostuser");
     }
 }
