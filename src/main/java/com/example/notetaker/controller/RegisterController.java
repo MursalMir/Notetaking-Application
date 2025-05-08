@@ -27,6 +27,11 @@ public class RegisterController {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
+        if (username.isBlank() || password.isBlank()) {
+            showAlert("Registration Error", "Username and password cannot be blank.");
+            return;
+        }
+
         if (userService.register(username, password)) {
             showAlert("Registration Successful", "Returning to login");
             goToLogin();

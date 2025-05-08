@@ -23,6 +23,15 @@ public class UserServiceTest {
     }
 
     @Test
+    void testRegisterBlankFields() {
+        assertFalse(service.register("", "password"));
+        assertFalse(service.register("username", ""));
+        assertFalse(service.register("", ""));
+        assertFalse(service.register("   ", "   "));
+    }
+
+
+    @Test
     void testRegisterDuplicateUser() {
         service.register("dupeuser", "pass1");
         boolean result = service.register("dupeuser", "pass2");
