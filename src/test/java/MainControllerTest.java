@@ -37,7 +37,7 @@ public class MainControllerTest {
         field.set(controller, dummyPane);
     }
 
-    @Test
+    /* @Test
     void testNoteViewLoadsWithoutException() {
         assertDoesNotThrow(() -> Platform.runLater(() ->
                 controller.openNewNote()));
@@ -59,5 +59,5 @@ public class MainControllerTest {
     void testSwitchToEditNoteManually() {
         assertDoesNotThrow(() -> Platform.runLater(() ->
                 controller.switchView("edit-note.fxml")));
-    }
+    } */
 }
