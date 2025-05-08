@@ -29,7 +29,7 @@ public class LoginController {
 
         if (userService.login(username, password)) {
             // Successful login
-            // Successful login
+            // Track the logged-in user
             try {
                 Parent root = FXMLLoader.load(getClass().getResource("/com/example/notetaker/MainView.fxml"));
                 Stage stage = (Stage) usernameField.getScene().getWindow();
