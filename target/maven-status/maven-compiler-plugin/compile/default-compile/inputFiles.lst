@@ -1,17 +1,19 @@
-D:\University Stuff\CAB302 Software Development\Assessment Task 1\AI Notetaking App\src\main\java\com\example\notetaker\service\UserService.java
-D:\University Stuff\CAB302 Software Development\Assessment Task 1\AI Notetaking App\src\main\java\com\example\notetaker\controller\NoteController.java
-D:\University Stuff\CAB302 Software Development\Assessment Task 1\AI Notetaking App\src\main\java\com\example\notetaker\Main.java
-D:\University Stuff\CAB302 Software Development\Assessment Task 1\AI Notetaking App\src\main\java\com\example\notetaker\controller\AIViewController.java
-D:\University Stuff\CAB302 Software Development\Assessment Task 1\AI Notetaking App\src\main\java\com\example\notetaker\controller\EditNoteController.java
-D:\University Stuff\CAB302 Software Development\Assessment Task 1\AI Notetaking App\src\main\java\com\example\notetaker\service\OllamaConnection.java
-D:\University Stuff\CAB302 Software Development\Assessment Task 1\AI Notetaking App\src\main\java\module-info.java
-D:\University Stuff\CAB302 Software Development\Assessment Task 1\AI Notetaking App\src\main\java\com\example\notetaker\model\NoteDAO.java
-D:\University Stuff\CAB302 Software Development\Assessment Task 1\AI Notetaking App\src\main\java\com\example\notetaker\controller\MainController.java
-D:\University Stuff\CAB302 Software Development\Assessment Task 1\AI Notetaking App\src\main\java\com\example\notetaker\controller\RegisterController.java
-D:\University Stuff\CAB302 Software Development\Assessment Task 1\AI Notetaking App\src\main\java\com\example\notetaker\controller\LoginController.java
-D:\University Stuff\CAB302 Software Development\Assessment Task 1\AI Notetaking App\src\main\java\com\example\notetaker\controller\PlaceholderNoteTakingWindowController.java
-D:\University Stuff\CAB302 Software Development\Assessment Task 1\AI Notetaking App\src\main\java\com\example\notetaker\model\FileParser.java
-D:\University Stuff\CAB302 Software Development\Assessment Task 1\AI Notetaking App\src\main\java\com\example\notetaker\model\FileUploadDAO.java
-D:\University Stuff\CAB302 Software Development\Assessment Task 1\AI Notetaking App\src\main\java\com\example\notetaker\model\LearningMaterial.java
-D:\University Stuff\CAB302 Software Development\Assessment Task 1\AI Notetaking App\src\main\java\com\example\notetaker\controller\SavedNotesController.java
-D:\University Stuff\CAB302 Software Development\Assessment Task 1\AI Notetaking App\src\main\java\com\example\notetaker\model\Note.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\com\example\notetaker\Main.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\com\example\notetaker\controller\SavedNotesController.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\com\example\notetaker\controller\EditNoteController.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\com\example\notetaker\model\UserDAO.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\com\example\notetaker\model\NoteDAO.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\com\example\notetaker\controller\AIViewController.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\module-info.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\com\example\notetaker\model\LearningMaterial.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\com\example\notetaker\controller\NoteController.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\com\example\notetaker\model\FileUploadDAO.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\com\example\notetaker\service\OllamaConnection.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\com\example\notetaker\controller\RegisterController.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\com\example\notetaker\controller\MainController.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\com\example\notetaker\model\FileParser.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\com\example\notetaker\service\UserService.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\com\example\notetaker\controller\PlaceholderNoteTakingWindowController.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\com\example\notetaker\controller\LoginController.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\com\example\notetaker\model\User.java
+E:\Bachelor_IT\Semester_1_2025\CAB302\IdeaProjects\CAB302_steve\src\main\java\com\example\notetaker\model\Note.java
