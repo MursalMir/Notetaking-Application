@@ -97,11 +97,37 @@ public class AIViewController {
         String selectedFilename = uploadedMaterialsListView.getSelectionModel().getSelectedItem();
 
         if (selectedFilename != null) {
-            System.out.println("Selected file: " + selectedFilename + " - AI generation not completely integrated yet.");
+            try {
+                for (com.example.notetaker.model.LearningMaterial material : FileUploadDAO.getAllUploads()) {
+                    if (material.getFilename().equals(selectedFilename)) {
+                        File file = new File(material.getFilepath());
+
+                        String learningMaterialText = com.example.notetaker.model.FileParser.extractText(file);
+
+                        // Get the student notes from the input area
+                        String studentNotes = noteEntryArea.getText();
+
+                        // Combine into a prompt
+                        String prompt = learningMaterialText + "\n\nUse the above learning material to improve the following student notes:\n\n" + studentNotes;
+
+                        // Ai generated summary
+                        String result = ollamaConnection.generateExpandedNotes(prompt);
+
+                        // Display result
+                        expandedNoteArea.setText(result);
+                        return;
+                    }
+                }
+                System.out.println("File not found in database - please reupload");
+            } catch (Exception e) {
+                e.printStackTrace();
+                noteEntryArea.setText("Error reading file: " + e.getMessage());
+            }
         }
         else {
-                System.out.println("No file selected");
+            noteEntryArea.setText("Please select a file from the list");
         }
+
     }
 
 }
