@@ -10,10 +10,17 @@
             prefHeight="400.0" prefWidth="600.0">
 
     <top>
-        <VBox alignment="TOP_LEFT">
+        <HBox spacing="10.0" alignment="TOP_LEFT">
             <padding><Insets top="10" left="10" right="10" bottom="0"/></padding>
             <Button fx:id="backToDashboardButton" text="← Back to Dashboard" onAction="#returnToHome"/>
-        </VBox>
+            <Region fx:id="spacer" HBox.hgrow="ALWAYS" />
+
+            <Button fx:id="uploadButton"
+                    text="Upload Material Here"
+                    onAction="#handleUploadButtonClick"
+                    maxWidth="150.0"
+            />
+        </HBox>
     </top>
 
     <center>
@@ -22,20 +29,38 @@
                 <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
             </padding>
 
-            <TextArea fx:id="noteEntryArea"
-                      wrapText="true"
-                      editable="true"
-            />
+            <HBox spacing ="10.0">
+                <TextArea fx:id="noteEntryArea"
+                              wrapText="true"
+                              editable="true"
+                              prefWidth="440.0"
+                              prefHeight="150.0"
+                />
 
-            <TextArea fx:id="expandedNoteArea"
-                      wrapText="true"
-                      editable="false"
-            />
+                <ListView fx:id="uploadedMaterialsListView"
+                          prefHeight="200.0"
+                          maxWidth="600.0"
+                          style="fx-background-color: #fdfdfd;"
+                />
+            </HBox>
+            <HBox spacing ="10.0" alignment="CENTER_RIGHT">
+                <TextArea fx:id="expandedNoteArea"
+                          wrapText="true"
+                          editable="false"
+                          prefWidth="440.0"
+                />
 
-            <Button fx:id="generateButton"
-                    text="Generate"
-                    onAction="#onGenerateButtonClick"
-            />
+                <Button fx:id="generateButton"
+                        text="Generate"
+                        prefWidth="150.0"
+                        onAction="#onGenerateButtonClick"
+                />
+                <Button fx:id="printSelectedFileButton"
+                        text = "Placeholder"
+                        prefWidth="150.0"
+                        onAction="#onPrintSelectedFileButtonClick"
+                />
+            </HBox>
         </VBox>
     </center>
 </BorderPane>

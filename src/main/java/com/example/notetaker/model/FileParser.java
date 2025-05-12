@@ -82,7 +82,7 @@ public class FileParser {
         // Open a FileInputStream to read the .docx file
         try (FileInputStream fis = new FileInputStream(file);
 
-             // Creates a XWPFDocument from the opened file stream
+             // Creates a XWPFDocument(?) from the opened file stream
             XWPFDocument document = new XWPFDocument(fis)) {
 
             // Use XWPFWordExtractor function to extract the document's text content

@@ -1,5 +1,5 @@
-com\example\notetaker\Main.class
 com\example\notetaker\model\NoteDAO.class
+com\example\notetaker\Main.class
 com\example\notetaker\model\Note.class
 com\example\notetaker\controller\LoginController.class
 com\example\notetaker\model\FileUploadDAO.class
