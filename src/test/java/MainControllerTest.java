@@ -4,11 +4,13 @@ import javafx.scene.layout.StackPane;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.awt.GraphicsEnvironment;
 import java.lang.reflect.Field;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class MainControllerTest {
 
@@ -17,12 +19,12 @@ public class MainControllerTest {
 
     @BeforeEach
     void setUp() throws Exception {
-        // Ensure JavaFX toolkit is started only once
+        // Skip all tests if running in headless environment
+        assumeTrue(!GraphicsEnvironment.isHeadless(), "Skipping JavaFX tests in headless mode");
+
         if (!javafxStarted) {
             CountDownLatch latch = new CountDownLatch(1);
-            Platform.startup(() -> {
-                latch.countDown();
-            });
+            Platform.startup(latch::countDown);
             if (!latch.await(5, TimeUnit.SECONDS)) {
                 throw new IllegalStateException("JavaFX initialization took too long.");
             }
@@ -39,24 +41,25 @@ public class MainControllerTest {
 
     @Test
     void testNoteViewLoadsWithoutException() {
-        assertDoesNotThrow(() -> Platform.runLater(() ->
-                controller.openNewNote()));
+        assumeTrue(!GraphicsEnvironment.isHeadless());
+        assertDoesNotThrow(() -> Platform.runLater(controller::openNewNote));
     }
 
     @Test
     void testAIViewLoadsWithoutException() {
-        assertDoesNotThrow(() -> Platform.runLater(() ->
-                controller.openAIView()));
+        assumeTrue(!GraphicsEnvironment.isHeadless());
+        assertDoesNotThrow(() -> Platform.runLater(controller::openAIView));
     }
 
     @Test
     void testSavedNotesLoadsWithoutException() {
-        assertDoesNotThrow(() -> Platform.runLater(() ->
-                controller.openSavedNotes()));
+        assumeTrue(!GraphicsEnvironment.isHeadless());
+        assertDoesNotThrow(() -> Platform.runLater(controller::openSavedNotes));
     }
 
     @Test
     void testSwitchToEditNoteManually() {
+        assumeTrue(!GraphicsEnvironment.isHeadless());
         assertDoesNotThrow(() -> Platform.runLater(() ->
                 controller.switchView("edit-note.fxml")));
     }
