@@ -1,5 +1,6 @@
 package com.example.notetaker.controller;
 
+import com.example.notetaker.Util.AlertUtils;
 import com.example.notetaker.model.Note;
 import com.example.notetaker.model.NoteDAO;
 import javafx.fxml.FXML;
@@ -30,6 +31,8 @@ public class NoteController {
             NoteDAO.saveNote(note);
             titleField.clear();
             contentArea.clear();
+        } else {
+            AlertUtils.showAlert("Missing Information", "Please fill in both the title and content fields before saving.");
         }
     }
 

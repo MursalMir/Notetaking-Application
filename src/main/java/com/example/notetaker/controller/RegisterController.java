@@ -1,5 +1,6 @@
 package com.example.notetaker.controller;
 
+import com.example.notetaker.Util.AlertUtils;
 import com.example.notetaker.service.UserService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,14 +25,19 @@ public class RegisterController {
 
     @FXML
     private void handleRegister(ActionEvent event) {
-        String username = usernameField.getText();
-        String password = passwordField.getText();
+        String username = usernameField.getText().trim();
+        String password = passwordField.getText().trim();
+
+        if (username.isEmpty() || password.isEmpty()) {
+            AlertUtils.showAlert("Missing Fields", "Please enter both username and password.");
+            return;
+        }
 
         if (userService.register(username, password)) {
-            showAlert("Registration Successful", "Returning to login");
-            goToLogin();
+            AlertUtils.showAlert("Registration Successful", "Welcome! Redirecting to your dashboard.");
+            goToDashboard();
         } else {
-            showAlert("Registration Failed", "Username already exists!");
+            AlertUtils.showAlert("Registration Failed", "Username already exists!");
         }
     }
 
@@ -51,12 +57,15 @@ public class RegisterController {
         }
     }
 
-    private void showAlert(String title, String message) {
-        javafx.scene.control.Alert alert = new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.ERROR);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
+    private void goToDashboard() {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/com/example/notetaker/MainView.fxml"));
+            Stage stage = (Stage) usernameField.getScene().getWindow();
+            stage.setScene(new Scene(root, 800, 600));
+            stage.setTitle("Dashboard");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-
 }
