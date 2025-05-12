@@ -25,7 +25,7 @@ public class EditNoteController {
     public void updateNote() {
         currentNote.setTitle(titleField.getText());
         currentNote.setContent(contentArea.getText());
-        NoteDAO.updateNote(currentNote);  // You'll need to add this method
+        NoteDAO.updateNote(currentNote);
 
         returnToHome();
     }

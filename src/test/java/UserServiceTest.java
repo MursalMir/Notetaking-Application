@@ -1,6 +1,12 @@
+import com.example.notetaker.model.User;
+import com.example.notetaker.model.UserDAO;
 import com.example.notetaker.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -11,6 +17,16 @@ public class UserServiceTest {
     @BeforeEach
     void setUp() {
         service = UserService.getInstance();
+        clearUsersTable();  // 💡 Reset the DB before each test
+    }
+
+    private void clearUsersTable() {
+        try (Connection conn = DriverManager.getConnection("jdbc:sqlite:users.db");
+             Statement stmt = conn.createStatement()) {
+            stmt.execute("DELETE FROM users");  // ✅ Removes all users before each test
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Test
