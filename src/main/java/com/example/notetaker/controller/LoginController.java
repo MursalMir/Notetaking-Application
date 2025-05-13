@@ -28,10 +28,9 @@ public class LoginController {
         String password = passwordField.getText();
 
         if (userService.login(username, password)) {
-            // Successful login
-            // Successful login
+            com.example.notetaker.model.User.currentUser = new com.example.notetaker.model.User(username, password);
             try {
-                Parent root = FXMLLoader.load(getClass().getResource("/com/example/notetaker/PlaceholderNoteTakingWindow.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("/com/example/notetaker/MainView.fxml"));
                 Stage stage = (Stage) usernameField.getScene().getWindow();
                 stage.setScene(new Scene(root));
                 stage.show();
@@ -39,10 +38,10 @@ public class LoginController {
                 e.printStackTrace();
             }
         } else {
-            // Failed login - show alert
             showAlert("Login Failed", "Incorrect username or password.");
         }
     }
+
 
     @FXML
     private void handleGoToRegister(ActionEvent event) {

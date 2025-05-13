@@ -35,6 +35,12 @@
                 prefWidth="260"
                 onAction="#openSavedNotes"
                 style="-fx-background-color: #9b59b6; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 12;" />
+
+        <Button text="🚪 Logout"
+                prefWidth="260"
+                onAction="#handleLogout"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 15px; -fx-background-radius: 12;" />
+
     </VBox>
 
 </StackPane>
