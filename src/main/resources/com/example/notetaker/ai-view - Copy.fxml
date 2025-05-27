@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx"
+            fx:controller="com.example.notetaker.controller.AIViewController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <VBox spacing="10.0">
+            <Label text="🧠 AI Note Generator"
+                   style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #34495e;"
+                   alignment="CENTER"
+                   maxWidth="Infinity"
+                   BorderPane.alignment="CENTER"/>
+
+            <HBox spacing="10.0" alignment="TOP_LEFT">
+                <padding>
+                    <Insets top="0" left="10" right="10" bottom="0"/>
+                </padding>
+                <Button fx:id="backToDashboardButton" text="← Back to Dashboard" onAction="#returnToHome"
+                        style="-fx-font-size: 14px; -fx-background-color: #d3e0f0; -fx-border-radius: 5; -fx-background-radius: 5;"/>
+                <Region fx:id="spacer" HBox.hgrow="ALWAYS"/>
+                <Button fx:id="uploadButton"
+                        text="📤 Upload Material"
+                        onAction="#handleUploadButtonClick"
+                        maxWidth="150.0"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="TOP_LEFT" spacing="20.0" xmlns:fx="http://javafx.com/fxml">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+
+            <HBox spacing ="10.0">
+                <TextArea fx:id="noteEntryArea"
+                              promptText="Enter your sparse notes here..."
+                              wrapText="true"
+                              prefWidth="600"
+                              prefHeight="100"
+                              style="-fx-font-size: 14px;"
+                />
+
+                <ListView fx:id="uploadedMaterialsListView"
+                          prefHeight="100"
+                          prefWidth="600"
+                          style="-fx-font-size: 14px;"
+                />
+            </HBox>
+            <HBox spacing ="10.0" alignment="CENTER_RIGHT">
+                <TextArea fx:id="expandedNoteArea"
+                          promptText="AI enhanced notes will output here..."
+                          wrapText="true"
+                          editable="false"
+                          prefWidth="600"
+                          prefHeight="120"
+                          style="-fx-font-size: 14px;"
+                />
+
+                <Button fx:id="generateButton"
+                        text="Generate"
+                        onAction="#onGenerateButtonClick"
+                        style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10;"
+                        prefWidth="180"
+                />
+                <Button fx:id="printSelectedFileButton"
+                        text="Generate with AI"
+                        onAction="#onPrintSelectedFileButtonClick"
+                        style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 10;"
+                />
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
