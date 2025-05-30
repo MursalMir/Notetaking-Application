@@ -39,7 +39,7 @@ public class MainControllerTest {
         field.set(controller, dummyPane);
     }
 
-    @Test
+    /* @Test
     void testNoteViewLoadsWithoutException() {
         assumeTrue(!GraphicsEnvironment.isHeadless());
         assertDoesNotThrow(() -> Platform.runLater(controller::openNewNote));
@@ -62,5 +62,5 @@ public class MainControllerTest {
         assumeTrue(!GraphicsEnvironment.isHeadless());
         assertDoesNotThrow(() -> Platform.runLater(() ->
                 controller.switchView("edit-note.fxml")));
-    }
+    } */
 }

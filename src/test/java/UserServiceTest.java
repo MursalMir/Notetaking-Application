@@ -3,6 +3,8 @@ import com.example.notetaker.model.UserDAO;
 import com.example.notetaker.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import com.example.notetaker.model.UserDAO;
+import org.junit.jupiter.api.AfterEach;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,6 +19,7 @@ public class UserServiceTest {
     @BeforeEach
     void setUp() {
         service = UserService.getInstance();
+        cleanUp();
         clearUsersTable();  // 💡 Reset the DB before each test
     }
 
@@ -34,6 +37,15 @@ public class UserServiceTest {
         boolean result = service.register("testuser", "password123");
         assertTrue(result, "User should register successfully");
     }
+
+    @Test
+    void testRegisterBlankFields() {
+        assertFalse(service.register("", "password"));
+        assertFalse(service.register("username", ""));
+        assertFalse(service.register("", ""));
+        assertFalse(service.register("   ", "   "));
+    }
+
 
     @Test
     void testRegisterDuplicateUser() {
@@ -60,5 +72,14 @@ public class UserServiceTest {
     void testLoginNonExistentUser() {
         boolean result = service.login("ghostuser", "any");
         assertFalse(result, "Should fail login for unknown user");
+    }
+
+    @AfterEach
+    void cleanUp() {
+        UserDAO.deleteUser("testuser");
+        UserDAO.deleteUser("dupeuser");
+        UserDAO.deleteUser("validuser");
+        UserDAO.deleteUser("loginuser");
+        UserDAO.deleteUser("ghostuser");
     }
 }

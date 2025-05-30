@@ -33,6 +33,11 @@ public class RegisterController {
             return;
         }
 
+        if (username.isBlank() || password.isBlank()) {
+            showAlert("Registration Error", "Username and password cannot be blank.");
+            return;
+        }
+
         if (userService.register(username, password)) {
             AlertUtils.showAlert("Registration Successful", "Welcome! Redirecting to your dashboard.");
             goToDashboard();

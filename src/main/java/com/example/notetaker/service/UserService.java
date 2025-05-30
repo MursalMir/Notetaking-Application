@@ -20,6 +20,11 @@ public class UserService {
     }
 
     public boolean register(String username, String password) {
+        if (username == null || username.isBlank() ||
+                password == null || password.isBlank()) {
+            return false;
+        }
+
         return com.example.notetaker.model.UserDAO.registerUser(
                 new com.example.notetaker.model.User(username, password)
         );
