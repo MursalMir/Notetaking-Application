@@ -1,7 +1,5 @@
 package com.example.notetaker.service;
 
-import java.util.HashMap;
-import java.util.Map;
 
 public class UserService {
     private static UserService instance = null;

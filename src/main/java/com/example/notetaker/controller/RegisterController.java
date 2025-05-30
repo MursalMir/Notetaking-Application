@@ -34,7 +34,7 @@ public class RegisterController {
         }
 
         if (username.isBlank() || password.isBlank()) {
-            showAlert("Registration Error", "Username and password cannot be blank.");
+            AlertUtils.showAlert("Registration Error", "Username and password cannot be blank.");
             return;
         }
 

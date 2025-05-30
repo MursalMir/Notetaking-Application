@@ -1,9 +1,7 @@
-import com.example.notetaker.model.User;
 import com.example.notetaker.model.UserDAO;
 import com.example.notetaker.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import com.example.notetaker.model.UserDAO;
 import org.junit.jupiter.api.AfterEach;
 
 import java.sql.Connection;
